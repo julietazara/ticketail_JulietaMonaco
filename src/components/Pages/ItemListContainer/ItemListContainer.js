@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { gFetch } from '../../helpers/gFetch';
-import { Item } from '../ItemList/ItemList';
+import { ItemList } from '../ItemList/ItemList';
 
 export const ItemListContainer = ({ greeting }) => {
 
@@ -26,11 +26,12 @@ export const ItemListContainer = ({ greeting }) => {
     return (
         <div>
             <h2>{greeting}</h2>
-            <div className='row'>
+            <div>
                 { loading ?
                     <h5>Cargando...</h5>
                         :
-                    tickets.map( ticket  => <Item ticket = {ticket ? ticket : true} key={ticket.id}/>)
+                    //tickets.map( ticket  => <ItemList ticket = {ticket ? ticket : true} key={ticket.id}/>)
+                    <ItemList tickets = {tickets}/>
                 }
             </div>
         </div>

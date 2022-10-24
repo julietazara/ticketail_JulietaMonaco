@@ -2,31 +2,32 @@ import { CartWidget } from '../CartWidget/CartWidget';
 import { Link } from 'react-router-dom';
 import React from 'react';
 import logo from '../../assets/images/logo.png';
+import './navBar.css';
 
 export const NavBar = () => {
     return (
-        <div>
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                <div className="container-fluid d-flex">
+        <div className="background">
+            <nav className="navbar navbar-expand-lg navbar-light">
+                <div className="container">
                     <Link to='/' className="navbar-brand">
-                        <img src={logo} alt="" height="150" className="d-inline-block align-text-top"/>
+                        <img src={logo} alt="" height="100" className="d-inline-block align-text-top"/>
                     </Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse mx-3" id="navbarNavDropdown">
-                        <ul className="navbar-nav">
-                            <li className="nav-item mx-2">
+                        <ul className="navbar-nav ms-auto text-center">
+                            <li className="nav-item mx-2 my-auto">
                                 <Link to='/' className="nav-link active">Inicio</Link>
                             </li>
-                            <li className="nav-item mx-2">
+                            <li className="nav-item mx-2 my-auto">
                                 <Link to='/' className="nav-link">Contacto</Link>
                             </li>
-                            <li className="nav-item mx-2">
+                            <li className="nav-item mx-2 my-auto">
                                 <Link to='/' className="nav-link">Nosotros</Link>
                             </li>
-                            <li className="nav-item dropdown mx-2">
-                                <p className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <li className="nav-item dropdown mx-2 my-auto">
+                                <p className="nav-link dropdown-toggle my-auto" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Tickets
                                 </p>
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -35,7 +36,7 @@ export const NavBar = () => {
                                     <li><Link to='/category/Teatro' className="dropdown-item">Teatros</Link></li>
                                 </ul>
                             </li>
-                            <li className="nav-item mx-2">
+                            <li className="nav-item mx-2 my-auto">
                                 <CartWidget/>
                             </li>
                         </ul>
