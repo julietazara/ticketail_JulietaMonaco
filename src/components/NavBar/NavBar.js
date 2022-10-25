@@ -18,17 +18,17 @@ export const NavBar = () => {
                     <div className="collapse navbar-collapse mx-3" id="navbarNavDropdown">
                         <ul className="navbar-nav ms-auto text-center">
                             <li className="nav-item mx-2 my-auto">
-                                <Link to='/' className="nav-link active">Inicio</Link>
+                                <Link to='/' className="nav-link active"><h4>Inicio</h4></Link>
                             </li>
                             <li className="nav-item mx-2 my-auto">
-                                <Link to='/' className="nav-link">Contacto</Link>
+                                <Link to='/' className="nav-link"><h4>Contacto</h4></Link>
                             </li>
                             <li className="nav-item mx-2 my-auto">
-                                <Link to='/' className="nav-link">Nosotros</Link>
+                                <Link to='/' className="nav-link"><h4>Nosotros</h4></Link>
                             </li>
-                            <li className="nav-item dropdown mx-2 my-auto">
+                            <li className="nav-item dropdown mx-2 my-auto ">
                                 <p className="nav-link dropdown-toggle my-auto" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Tickets
+                                    <h4 className="d-inline-block">Tickets</h4>
                                 </p>
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                     <li><Link to='/category/Musica' className="dropdown-item">Musica</Link></li>

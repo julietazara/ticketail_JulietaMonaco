@@ -3,7 +3,9 @@
     background-color:#f91994;
 }
 li{
-    font-size: 1.2rem;
+    font-weight: bolder;
+}
+h4{
     font-weight: bolder;
 }
 a{
