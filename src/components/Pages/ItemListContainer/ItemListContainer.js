@@ -30,7 +30,6 @@ export const ItemListContainer = ({ greeting }) => {
                 { loading ?
                     <h5>Cargando...</h5>
                         :
-                    //tickets.map( ticket  => <ItemList ticket = {ticket ? ticket : true} key={ticket.id}/>)
                     <ItemList tickets = {tickets}/>
                 }
             </div>
