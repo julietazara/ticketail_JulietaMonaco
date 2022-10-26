@@ -1,32 +1,23 @@
 import React from 'react';
 import { BsCartFill } from "react-icons/bs";
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import './cartWidget.css'
 
 export const CartWidget=()=>{
     const [contador, setContador] = useState(0);
-    
-
-    const increase = () => {
-        setContador(contador + 1);
-    }
-
-    const decrease = () => {
-        if(contador > 0){
-            setContador(contador - 1);
-        }
-    }
 
     return(
         <div>
-            <a className="nav-link" href="#">
-                <h4 className="d-inline-block mx-2">
-                    {contador > 0 ?
-                    contador :
-                    ''
-                    }
+            <button type="button" class="btn btn-light position-relative">
+                <Link to={'/cart'}>
                     <BsCartFill size={'1.5em'}/>
-                </h4>
-            </a>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
+                        {contador}
+                        <span class="visually-hidden">unread messages</span>
+                    </span>
+                </Link>
+            </button>
         </div>
     );
 }

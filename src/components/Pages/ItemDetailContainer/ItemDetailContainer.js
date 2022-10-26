@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { gFetch } from '../../helpers/gFetch';
-import { ItemDetail } from '../ItemDetail/ItemDetail';
+import { ItemDetail } from '../../ItemDetail/ItemDetail';
+import './itemDetailContainer.css';
 
 export const ItemDetailContainer = () => {
     const [ticket, setTicket] = useState([])
@@ -16,7 +17,10 @@ export const ItemDetailContainer = () => {
         .finally(() => setLoading(false))
     }, [])
     return (
-        <div>
+        <div className='bg'>
+
+        
+        <div className="container-fluid my-5 py-5">
             <div className='row'>
                 { loading ?
                     <h5>Cargando...</h5>
@@ -24,6 +28,6 @@ export const ItemDetailContainer = () => {
                     <ItemDetail ticket = {ticket ? ticket : true}/>
                 }
             </div>
-        </div>
+        </div></div>
     );
 }

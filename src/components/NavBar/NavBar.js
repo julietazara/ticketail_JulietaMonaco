@@ -6,8 +6,8 @@ import './navBar.css';
 
 export const NavBar = () => {
     return (
-        <div className="background">
-            <nav className="navbar navbar-expand-lg navbar-light">
+        <div>
+            <nav className="navbar navbar-expand-lg navbar-light fixed-top mask-custom shadow-0">
                 <div className="container">
                     <Link to='/' className="navbar-brand">
                         <img src={logo} alt="" height="100" className="d-inline-block align-text-top"/>

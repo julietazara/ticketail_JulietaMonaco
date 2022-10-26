@@ -3,3 +3,10 @@
     margin: 0;
     box-sizing: border-box;
 }
+body{
+    position: relative;
+    background: rgb(255,255,255);
+    background: linear-gradient(142deg, rgba(255,255,255,1) 0%, rgba(255,106,0,1) 50%, rgba(255,0,224,1) 180%);
+    padding-bottom: 4em;
+    min-height: 95vh;
+}
