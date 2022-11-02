@@ -10,7 +10,7 @@ export const CartWidget = () => {
 
     useEffect(() => {
         setCantidad(cantTickets());
-    },[cantTickets()])
+    },[cantTickets])
 
     return(
         <div>
