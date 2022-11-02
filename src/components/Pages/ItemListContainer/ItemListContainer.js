@@ -28,7 +28,7 @@ export const ItemListContainer = ({ greeting }) => {
         <div className="container my-5 py-5">
             <div>
                 { loading ?
-                    <h5>Cargando...</h5>
+                    <h1 className='my-5 py-5 text-center'><b>Cargando...</b></h1>
                         :
                     <ItemList tickets = {tickets}/>
                 }

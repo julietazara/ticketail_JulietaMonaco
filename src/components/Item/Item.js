@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export const Item = ({ ticket }) => {
     return (
-        <div className='col-4'>
+        <div className='col-md-4 col-xs-6'>
             <div className="card w-80 mt-5 d-flex align-items-center">
                 <img src={ticket.img} className="card-img-top w-60" alt="Imagen."/>
                 <div className="card-body">

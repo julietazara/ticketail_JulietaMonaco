@@ -7,7 +7,7 @@ import { NavBar } from './components/NavBar/NavBar';
 import { NotFound } from './components/NotFound/NotFound'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { Footer } from './components/Footer/Footer';
-import { CartProvider } from './CartContext';
+import { CartProvider } from './context/CartContext';
 
 function App() {
   return (

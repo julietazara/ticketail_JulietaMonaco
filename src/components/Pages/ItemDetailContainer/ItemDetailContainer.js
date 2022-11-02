@@ -17,17 +17,14 @@ export const ItemDetailContainer = () => {
         .finally(() => setLoading(false))
     }, [])
     return (
-        <div className='bg'>
-
-        
         <div className="container-fluid my-5 py-5">
             <div className='row'>
                 { loading ?
-                    <h5>Cargando...</h5>
+                    <h1 className='my-5 py-5 text-center'><b>Cargando...</b></h1>
                         :
                     <ItemDetail ticket = {ticket ? ticket : true}/>
                 }
             </div>
-        </div></div>
+        </div>
     );
 }
