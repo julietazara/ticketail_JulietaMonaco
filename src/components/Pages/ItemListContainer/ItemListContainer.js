@@ -1,7 +1,8 @@
+import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { gFetch } from '../../helpers/gFetch';
 import { ItemList } from '../../ItemList/ItemList';
+
 
 export const ItemListContainer = ({ greeting }) => {
 
@@ -11,18 +12,21 @@ export const ItemListContainer = ({ greeting }) => {
     const{idCategory} = useParams()
 
     useEffect(() => {
+        const db = getFirestore()
+        const queryCollection = collection(db, 'ticket')
         if(idCategory){
-            gFetch()
-            .then(res => setTickets(res.filter(tic => tic.category === idCategory)))
+            const queryFilter = query(queryCollection, where('category', '==', idCategory))
+            getDocs(queryFilter)
+            .then( resp => setTickets(resp.docs.map( tick => ({ id: tick.id, ...tick.data() }) )) )
             .catch(err => console.log(err))
             .finally(() => setLoading(false))
         }else{
-            gFetch()
-            .then(res => setTickets(res))
+            getDocs(queryCollection)
+            .then( resp => setTickets(resp.docs.map( tick => ({ id: tick.id, ...tick.data() }) )) )
             .catch(err => console.log(err))
             .finally(() => setLoading(false))
         }
-    }, [idCategory])
+    },[idCategory])
     
     return (
         <div className="container my-5 py-5">

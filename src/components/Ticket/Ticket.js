@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useCartContext } from '../../context/CartContext';
 import './ticket.css';
 
@@ -12,8 +13,8 @@ export const Ticket = ({ticket}) => {
     return (
         <div className='row'>
             <div className='col-md-8 p-3'>
-                <div className="d-flex align-items-center">
-                    <img src={ticket.img} className="card-img-top cartImg" alt="Imagen."/>
+            <div className="d-flex align-items-center">
+                <Link to={'/item/'+ticket.id}><img src={ticket.img} className="card-img-top cartImg" alt="Imagen."/></Link>
                     <div className="mx-5">
                         <h5 className="card-title text-left">Ticket: {ticket.name}</h5>
                         <h6 className="card-text text-left"><b>Precio: ${ticket.price} c/u</b></h6>

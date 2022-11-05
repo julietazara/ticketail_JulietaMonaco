@@ -5,6 +5,9 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import * as bootstrap from 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { firestoreInit } from './firebase/config';
+
+firestoreInit();
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
